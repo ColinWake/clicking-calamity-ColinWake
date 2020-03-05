@@ -3,7 +3,7 @@ describe("Cookie Clicker", () => {
         game = new ClickCounter();
     });
 
-    describe('Clicking', () => {
+    describe('Clicking the Cookie', () => {
 
         it('should increment total clicks', () => {
             game.increment();
