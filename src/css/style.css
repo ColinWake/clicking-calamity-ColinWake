@@ -14,6 +14,7 @@ body {
     margin: 0;
     opacity: 0;
     transition: opacity 0.75s ease-in;
+    background-color: #eaeaea;
 }
 
 #reset {
@@ -75,3 +76,41 @@ body {
     height: 100vh;
 }
 
+.flex-container__header a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.flex-container__header {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.element__tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.element__tooltip:hover .element__tooltip__text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.element__tooltip__text {
+    background-color: black;
+    border: thin solid black;
+    border-radius: 3px;
+    color: white;
+    width: 300px;
+    top: 100%;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+}
