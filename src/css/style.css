@@ -7,11 +7,13 @@ button {
 }
 
 button[id="reset"] {
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 body {
     margin: 0;
+    opacity: 0;
+    transition: opacity 0.75s ease-in;
 }
 
 #reset {
@@ -30,39 +32,39 @@ body {
 }
 
 
-.disabled-button {
+.grid-container__disabled-button {
     border: thin solid gray;
     border-radius: 3px;
     color: gray;
 }
 
-.enabled-button {
+.grid-container__enabled-button {
     border: thin solid darkgreen;
     border-radius: 3px;
     color: black;
 }
 
-.grid-container > .cookie {
+.flex-container__grid-container > .grid-container__cookie {
     grid-area: cookie;
 }
 
-.grid-container > .companions {
+.flex-container__grid-container > .grid-container__companions {
     grid-area: companions;
 }
 
-.grid-container > .multiplier {
+.flex-container__grid-container > .grid-container__multiplier {
     grid-area: multiplier;
 }
 
-.reset {
+.grid-container__reset {
     grid-area: reset;
     justify-self: stretch;
 }
 
-.grid-container {
+.flex-container__grid-container {
     flex: 1;
     display: grid;
-    grid-template-areas: "cookie . companions multiplier" "cookie . companions multiplier" ". . . ." "reset reset reset reset";
+    grid-template-areas: "cookie . companions multiplier" "cookie . companions multiplier" "reset reset reset reset";
     align-items: center;
     justify-items: center;
 }

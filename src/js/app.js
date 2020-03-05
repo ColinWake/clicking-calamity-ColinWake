@@ -6,10 +6,10 @@ const determineAvailability = () => {
     document.querySelector('#multiplier').disabled = game.clicks < game.multiplierPrice;
 
     document.querySelectorAll('button[type="button"]').forEach(button => {
-        if (!button.disabled && button.className === "disabled-button") {
-            button.className = "enabled-button"
-        } else if (button.disabled && button.className === "enabled-button") {
-            button.className = "disabled-button"
+        if (!button.disabled && button.className === "grid-container__disabled-button") {
+            button.className = "grid-container__enabled-button"
+        } else if (button.disabled && button.className === "grid-container__enabled-button") {
+            button.className = "grid-container__disabled-button"
         }
     })
 };
@@ -19,12 +19,13 @@ const resetGame = () => {
 };
 
 let gameTick = setInterval(() => {
-    document.querySelector('#totalClicks').innerHTML = `Clicks: ${game.clicks.toFixed(3)}`;
+    document.querySelector('#total-clicks').innerHTML = `Clicks: ${game.clicks.toFixed(3)}`;
     document.querySelector('#autoclicker').innerHTML = `More Autoclickers! Price: ${game.autoClickerPrice.toFixed(0)}`;
     document.querySelector('#multiplier').innerHTML = `Multiply earnings per click! Price: ${game.multiplierPrice.toFixed(0)}`;
+    document.querySelector('#cookies-per-second').innerHTML = `Cookies/s: ${((game.autoClickers * game.multiplier) * 2).toFixed(2)}`;
 
     document.querySelector('#autoclickers').innerHTML = 'Clicking Companions: ' + game.autoClickers;
-    document.querySelector('#multiplierRate').innerHTML = `Multiplier: ${game.multiplier.toFixed(2)}x`;
+    document.querySelector('#multiplier-rate').innerHTML = `Multiplier: ${game.multiplier.toFixed(2)}x`;
 
     determineAvailability();
 }, 10);
