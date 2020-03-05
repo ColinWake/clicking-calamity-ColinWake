@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Jasmine Spec Runner v3.5.0</title>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v3.5.0</title>
 
-  <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.5.0/jasmine_favicon.png">
-  <link rel="stylesheet" href="lib/jasmine-3.5.0/jasmine.css">
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.5.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-3.5.0/jasmine.css">
 
-  <script src="lib/jasmine-3.5.0/jasmine.js"></script>
-  <script src="lib/jasmine-3.5.0/jasmine-html.js"></script>
-  <script src="lib/jasmine-3.5.0/boot.js"></script>
+    <script src="lib/jasmine-3.5.0/jasmine.js"></script>
+    <script src="lib/jasmine-3.5.0/jasmine-html.js"></script>
+    <script src="lib/jasmine-3.5.0/boot.js"></script>
 
- 
 </head>
 
 <body>
-   <!-- include source files here... -->
-   <script src="/src/app.js"></script>
-   <!-- include spec files here... -->
-   <script src="/spec/app.spec.js"></script>
+
+<div class="flex-container">
+
+    <div class="grid-container">
+        <div class="cookie">
+
+            <img width="320" height="320" src="src/images/cookie.png" alt="Cookie" id="cookie" onclick="increment()">
+
+            <h1 id="totalClicks">Clicks: 0</h1>
+
+        </div>
+
+        <div class="companions">
+
+
+            <h2 id="autoclickers">Clicking Companions: 0</h2>
+
+            <button disabled type="button" class="disabled-button" id="autoclicker"
+                    onclick="incrementAutoClickers(); determineAvailability()">More Autoclickers! Price: <span
+                    id="autoclickerPrice">100</span></button>
+
+        </div>
+
+        <div class="multiplier">
+
+            <h2 id="multiplierRate">Multiplier: 1.00x</h2>
+
+            <button disabled type="button" class="disabled-button" id="multiplier"
+                    onclick="incrementMultiplier(); determineAvailability()">Multiply earnings per click! Price: <span
+                    id="multiplierPrice">10</span></button>
+
+
+        </div>
+
+        <button class="reset" id="reset" onclick="resetGame()">Reset Game!</button>
+
+    </div>
+
+</div>
+<!-- include source files here... -->
+<script src="src/js/ClickCounter.js"></script>
+<script src="src/js/app.js"></script>
+<!-- include spec files here... -->
+<script src="spec/js/ClickCounter.spec.js"></script>
 </body>
 </html>
