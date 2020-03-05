@@ -50,7 +50,7 @@ describe("Cookie Clicker", () => {
     it('should increase price when autoclicker is purchased', () => {
         game.clicks = game.autoClickerPrice;
         game.incrementAutoClickers();
-        expect(game.autoClickerPrice).toBe(1.1 + (0.1 * (this.autoClickers - 1)));
+        expect(game.autoClickerPrice.toFixed(0)).toBeCloseTo(110);
     });
 
     it('should decrease clicks when autoclicker is purchased', () => {
