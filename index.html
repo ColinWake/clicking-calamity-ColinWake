@@ -7,44 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0.000 Clicks</title>
 </head>
-<body>
+<body onload="document.body.style.opacity = '1'">
 
 <div class="flex-container">
 
-    <div class="grid-container">
-        <div class="cookie">
+    <div class="flex-container__grid-container">
+        <div class="grid-container__cookie">
 
             <img width="320" height="320" src="src/images/cookie.png" alt="Cookie" id="cookie"
                  onclick="game.increment()">
 
-            <h1 id="totalClicks">Clicks: 0</h1>
+            <h1 id="total-clicks">Clicks: 0</h1>
+
+            <h2 id="cookies-per-second">Cookies/s: 0</h2>
 
         </div>
 
-        <div class="companions">
+        <div class="grid-container__companions">
 
 
             <h2 id="autoclickers">Clicking Companions: 0</h2>
 
-            <button disabled type="button" class="disabled-button" id="autoclicker"
+            <button disabled type="button" class="grid-container__disabled-button" id="autoclicker"
                     onclick="game.incrementAutoClickers(); determineAvailability()">More Autoclickers! Price: <span
-                    id="autoclickerPrice">100</span></button>
+                    id="autoclicker-price">100</span></button>
 
         </div>
 
-        <div class="multiplier">
+        <div class="grid-container__multiplier">
 
-            <h2 id="multiplierRate">Multiplier: 1.00x</h2>
+            <h2 id="multiplier-rate">Multiplier: 1.00x</h2>
 
-            <button disabled type="button" class="disabled-button" id="multiplier"
+            <button disabled type="button" class="grid-container__disabled-button" id="multiplier"
                     onclick="game.incrementMultiplier(); determineAvailability()">Multiply earnings per click! Price:
                 <span
-                        id="multiplierPrice">10</span></button>
+                        id="multiplier-price">10</span></button>
 
 
         </div>
 
-        <button class="reset" id="reset" onclick="resetGame()">Reset Game!</button>
+        <button class="grid-container__reset" id="reset" onclick="resetGame()">Reset Game!</button>
 
     </div>
 
