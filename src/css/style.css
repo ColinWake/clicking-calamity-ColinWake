@@ -1,0 +1,71 @@
+button {
+    font-size: 1.2rem;
+}
+
+button[id="reset"] {
+    font-size: 1.4rem;
+}
+
+body {
+    margin: 0;
+}
+
+#reset {
+    border: thin solid red;
+    border-radius: 3px;
+    color: black;
+}
+
+#cookie {
+    transition: all 0.25s ease-in-out;
+}
+
+#cookie:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 0.5rem black);
+}
+
+
+.disabled-button {
+    border: thin solid gray;
+    border-radius: 3px;
+    color: gray;
+}
+
+.enabled-button {
+    border: thin solid darkgreen;
+    border-radius: 3px;
+    color: black;
+}
+
+.grid-container > .cookie {
+    grid-area: cookie;
+}
+
+.grid-container > .companions {
+    grid-area: companions;
+}
+
+.grid-container > .multiplier {
+    grid-area: multiplier;
+}
+
+.reset {
+    grid-area: reset;
+    justify-self: stretch;
+}
+
+.grid-container {
+    flex: 1;
+    display: grid;
+    grid-template-areas: "cookie . companions multiplier" "cookie . companions multiplier" ". . . ." "reset reset reset reset";
+    align-items: center;
+    justify-items: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
