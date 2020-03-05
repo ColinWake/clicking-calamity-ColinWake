@@ -1,4 +1,4 @@
-describe("Cookie Clicker", () => {
+describe("Game Engine", () => {
     beforeEach(() => {
         game = new ClickCounter();
     });
