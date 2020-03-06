@@ -31,7 +31,22 @@ describe('Application', () => {
             expect(document.querySelector('#multiplier').disabled).toBeFalse();
             expect(document.querySelector('#multiplier').className).toBe('grid-container__enabled-button');
         });
+    });
 
+    describe('Header Interaction', () => {
+        it('should show the modal when showModal() is called', () => {
+            showModal();
+            expect(document.querySelector('.modal').style.visibility).toBe('visible');
+            expect(document.querySelector('.modal').style.opacity).toBeGreaterThan(0);
+        });
 
+        it('should hide the modal when anywhere outside of it is clicked', function () {
+            showModal();
+            expect(document.querySelector('.modal').style.visibility).toBe('visible');
+            expect(document.querySelector('.modal').style.opacity).toBeGreaterThan(0);
+            document.querySelector('.modal').click(); // If modal is the target, hide the content
+            expect(document.querySelector('.modal').style.visibility).toBe('hidden');
+            expect(document.querySelector('.modal').style.opacity).toBeCloseTo(0)
+        });
     });
 });
