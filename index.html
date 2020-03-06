@@ -10,7 +10,15 @@
 <body onload="document.body.style.opacity = '1'">
 
 <div class="modal">
-
+    <div class="modal__content">
+        <h2>Colin Wakefield</h2>
+        <h3>Software Developer</h3>
+        <p><em>I'm a software engineer living in Central Ohio, with experience in multiple languages and
+            frameworks.</em>
+            <br><br>For more information about me, my portfolio is linked <a href="https://colinwake.github.io">here</a>.
+            To see more of my projects,
+            you can find my github <a href="https://github.com/colinwake">here</a>.</p>
+    </div>
 </div>
 
 <div class="flex-container">
@@ -24,7 +32,7 @@
         <h3 class="flex-container__header__element"><a href="https://orteil.dashnet.org/cookieclicker/">Our
             Inspiration</a></h3>
         <h3 class="flex-container__header__element">
-            <a href="#" onclick="displayModal()">Developer Info</a>
+            <a href="#" onclick="showModal()">Developer Info</a>
         </h3>
     </header>
 
@@ -46,7 +54,7 @@
             <h2 id="autoclickers">Clicking Companions: 0</h2>
 
             <button disabled type="button" class="grid-container__disabled-button" id="autoclicker"
-                    onclick="game.incrementAutoClickers(); determineAvailability()">More Autoclickers! Price: <span
+                    onclick="game.incrementAutoClickers(); determineAvailability()">More Companions! Price: <span
                     id="autoclicker-price">100</span></button>
 
         </div>

@@ -14,13 +14,25 @@ const determineAvailability = () => {
     })
 };
 
+const showModal = () => {
+    document.querySelector('.modal').style.visibility = 'visible';
+    document.querySelector('.modal').style.opacity = '1';
+};
+
+window.onclick = (e) => {
+    if (e.target === document.querySelector(".modal")) {
+        document.querySelector(".modal").style.visibility = 'hidden';
+        document.querySelector(".modal").style.opacity = '0';
+    }
+};
+
 const resetGame = () => {
     game = new ClickCounter();
 };
 
 let gameTick = setInterval(() => {
     document.querySelector('#total-clicks').innerHTML = `Clicks: ${game.clicks.toFixed(3)}`;
-    document.querySelector('#autoclicker').innerHTML = `More Autoclickers! Price: ${game.autoClickerPrice.toFixed(0)}`;
+    document.querySelector('#autoclicker').innerHTML = `More Companions! Price: ${game.autoClickerPrice.toFixed(0)}`;
     document.querySelector('#multiplier').innerHTML = `Multiply earnings per click! Price: ${game.multiplierPrice.toFixed(0)}`;
     document.querySelector('#cookies-per-second').innerHTML = `Cookies/s: ${((game.autoClickers * game.multiplier) * 2).toFixed(2)}`;
 
