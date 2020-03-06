@@ -38,4 +38,4 @@ You have been contracted by Coo Coo Computing Challengers to take a concept, Cli
       - [X] Coo Coo Computing Challengers
       - [X] The inspiration for this game, Cookie Clicker.
       - [X] Your contact info.
-  - [ ] Deploy your project so that it is reachable on the internet.
+  - [X] Deploy your project so that it is reachable on the internet.
